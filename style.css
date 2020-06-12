@@ -1,0 +1,145 @@
+
+.sky{
+    height: 600px;
+    background-image: linear-gradient(rgb(3, 72, 95), rgba(255, 255, 255, 0));
+}
+
+#cloud1{
+    width: 220px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    animation: wind 35s infinite;
+    animation-timing-function: linear;
+    z-index: 1;
+    
+}
+#cloud2{
+    width: 150px;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    animation: wind 45s infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-delay: 5s;
+    z-index: 1;
+    animation-fill-mode: both;
+}
+
+#heading1{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    margin-left: -165px;
+    text-align: center;
+    font-size: 500%;
+    opacity: 0;
+    transform: scale(1.4);
+    font-family: 'Titillium Web', sans-serif;
+    animation: name1 5s ;
+    animation-fill-mode: forwards;
+}
+
+#heading2{
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -145px;
+    font-size: 2.5em;
+    opacity: 0;
+    font-family: 'Titillium Web', sans-serif;
+    animation: name2 2.5s 1s;
+    
+    animation-fill-mode: forwards;
+}
+#frame{ 
+    position: absolute;
+    top: 34px;
+    left: 50%; 
+    opacity: 0;
+    margin-left: -85px;
+    animation: face 5s 2s; 
+    cursor: pointer;
+    animation-fill-mode: forwards;
+    background-color: black;
+    overflow: hidden; 
+}
+#face{
+    width: 130px;
+    transition:  0.5s ease-in;
+    z-index: -2;
+}
+#inner:hover #face{
+    opacity: 60%;
+    transform: scale(1.07);
+    z-index: -2;
+}
+
+/* Animations */
+@keyframes wind{
+    from{ transform: translatex(-300px); }
+    to{ transform: translatex(1550px); }
+}
+
+@keyframes name1{
+    from{ opacity: 0%; transform: translateY(40px); }
+    50%{ transform: scale(1.4); }
+    100%{ transform: scale(1.4); opacity: 100%;  }   
+}
+@keyframes name2{
+    from{ opacity: 0%; transform: translateY(-40px); }
+    50%{ transform: scale(1.05); }
+    100%{ transform: scale(1.05); opacity: 100%;  }    
+}
+@keyframes face{
+    from{ opacity: 0%; }
+    50%{ transform: scale(1.05); }
+    100%{ transform: scale(1.05); opacity: 100%;  }    
+}
+
+@media screen and (max-width: 600px){
+    #cloud1{
+        display: none;
+    }
+    #cloud2{
+        display: none;
+    }
+    #heading1{
+        position: absolute;
+        top: 300px;
+        left: 50%;
+        margin-left: -95px;
+        text-align: center;
+        font-size: 300%;
+        opacity: 0;
+        transform: scale(1.4);
+        font-family: 'Titillium Web', sans-serif;
+        animation: name1 5s ;
+        animation-fill-mode: forwards;
+    }
+    #heading2{
+        position: absolute;
+        top: 380px;
+        left: 50%;
+        margin-left: -137.19px;
+        font-size: 2.5em;
+        opacity: 0;
+        font-family: 'Titillium Web', sans-serif;
+        animation: name2 2.5s 1s;
+        
+        animation-fill-mode: forwards;
+    }
+    #frame{ 
+        position: absolute;
+        top: 34px;
+        left: 50%; 
+        opacity: 0;
+        margin-left: -68.25px;
+        animation: face 5s 2s; 
+        cursor: pointer;
+        animation-fill-mode: forwards;
+        background-color: black;
+        overflow: hidden; 
+    }
+}
