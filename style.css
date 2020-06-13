@@ -299,7 +299,11 @@ li.python::after{
         left: 50%;
         opacity: 0;
         margin-left: -65.25px;
+<<<<<<< HEAD
         animation: face 5s 2s;
+=======
+        animation: face 5s 2s; 
+>>>>>>> 2982fd688b91b70678a6831bd6dc964452d59e79
         cursor: pointer;
         animation-fill-mode: forwards;
         background-color: black;
