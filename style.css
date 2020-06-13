@@ -1,10 +1,9 @@
-
-.sky{
+.sky {
     height: 600px;
     background-image: linear-gradient(rgb(3, 72, 95), rgba(255, 255, 255, 0));
 }
 
-#cloud1{
+#cloud1 {
     width: 220px;
     position: absolute;
     top: 30px;
@@ -12,9 +11,9 @@
     animation: wind 35s infinite;
     animation-timing-function: linear;
     z-index: 1;
-    
 }
-#cloud2{
+
+#cloud2 {
     width: 150px;
     position: absolute;
     top: 300px;
@@ -27,83 +26,250 @@
     animation-fill-mode: both;
 }
 
-#heading1{
+#heading1 {
     position: absolute;
     top: 250px;
     left: 50%;
     margin-left: -165px;
     text-align: center;
     font-size: 500%;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 900;
     opacity: 0;
     transform: scale(1.4);
-    font-family: 'Titillium Web', sans-serif;
-    animation: name1 5s ;
+    animation: name1 5s;
     animation-fill-mode: forwards;
 }
 
-#heading2{
+#heading2 {
     position: absolute;
     top: 380px;
     left: 50%;
     margin-left: -145px;
     font-size: 2.5em;
+    font-weight: 200;
     opacity: 0;
     font-family: 'Titillium Web', sans-serif;
     animation: name2 2.5s 1s;
-    
     animation-fill-mode: forwards;
 }
-#frame{ 
+
+#frame {
     position: absolute;
     top: 34px;
-    left: 50%; 
+    left: 50%;
     opacity: 0;
     margin-left: -85px;
-    animation: face 5s 2s; 
+    animation: face 5s 2s;
     cursor: pointer;
     animation-fill-mode: forwards;
     background-color: black;
-    overflow: hidden; 
+    overflow: hidden;
 }
-#face{
+
+#face {
     width: 130px;
 }
-#frame:hover #face{
+
+#frame:hover #face {
     opacity: 60%;
     transform: scale(1.07);
-    transition:  0.5s ease-in;
+    transition: 0.5s ease-in;
 }
+
+#frame2 {
+    height: 400px;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.skills {
+    position: absolute;
+    top: 650px;
+    width: 100%;
+    height: 900px;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(29, 30, 102, 0.534), rgb(50, 60, 116));
+}
+
+.skillbox{
+    position: absolute;
+    left: 25%;
+    width: 50%;
+}
+
+li{
+    position: relative;
+    list-style: none;
+    margin: 30px;
+    font-size: 1.3em;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;;
+}
+li::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(14, 14, 14, 0.486);
+    border-radius: 10px;
+}
+li::after{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 15px;
+    width: 0;
+    background-color: rgba(14, 14, 14, 0.486);
+    border-radius: 10px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+
+}
+li.laziness::after{
+    animation-name: laziness;
+}
+li.procrastination::after{
+    animation-name: procrastination;
+}
+li.humor::after{
+    animation-name: humor;
+}
+li.java::after{
+    animation-name: java;
+}
+li.html::after{
+    animation-name: html;
+}
+li.css::after{
+    animation-name: css;
+}
+li.javascript::after{
+    animation-name: javascript;
+}
+li.c::after{
+    animation-name: c;
+}
+li.python::after{
+    animation-name: python;
+}
+
+
+
+
 
 /* Animations */
-@keyframes wind{
-    from{ transform: translatex(-300px); }
-    to{ transform: translatex(1550px); }
+
+@keyframes wind {
+    from {
+        transform: translatex(-300px);
+    }
+    to {
+        transform: translatex(1500px);
+    }
 }
 
-@keyframes name1{
-    from{ opacity: 0%; transform: translateY(40px); }
-    50%{ transform: scale(1.4); }
-    100%{ transform: scale(1.4); opacity: 100%;  }   
-}
-@keyframes name2{
-    from{ opacity: 0%; transform: translateY(-40px); }
-    50%{ transform: scale(1.05); }
-    100%{ transform: scale(1.05); opacity: 100%;  }    
-}
-@keyframes face{
-    from{ opacity: 0%; }
-    50%{ transform: scale(1.05); }
-    100%{ transform: scale(1.05); opacity: 100%;  }    
+@keyframes name1 {
+    from {
+        opacity: 0%;
+        transform: translateY(40px);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 100%;
+    }
 }
 
-@media screen and (max-width: 600px){
-    #cloud1{
+@keyframes name2 {
+    from {
+        opacity: 0%;
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 100%;
+    }
+}
+
+@keyframes face {
+    from {
+        opacity: 0%;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 100%;
+    }
+}
+@keyframes laziness{
+    to {
+        width: 99%;
+    }
+}
+@keyframes procrastination{
+    to {
+        width: 97%;
+    }
+}
+@keyframes humor{
+    to {
+        width: 85%;
+    }
+}
+@keyframes java{
+    to {
+        width: 70%;
+    }
+}
+@keyframes html{
+    to {
+        width: 90%;
+    }
+}
+@keyframes css{
+    to {
+        width: 87%;
+    }
+}
+@keyframes javascript{
+    to {
+        width: 30%;
+    }
+}
+@keyframes c{
+    to {
+        width: 80%;
+    }
+}
+@keyframes python{
+    to {
+        width: 20%;
+    }
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 600px) {
+    #cloud1 {
         display: none;
     }
-    #cloud2{
+    #cloud2 {
         display: none;
     }
-    #heading1{
+    #heading1 {
         position: absolute;
         top: 300px;
         left: 50%;
@@ -113,31 +279,34 @@
         opacity: 0;
         transform: scale(1.4);
         font-family: 'Titillium Web', sans-serif;
-        animation: name1 5s ;
+        animation: name1 5s;
         animation-fill-mode: forwards;
     }
-    #heading2{
+    #heading2 {
         position: absolute;
         top: 380px;
         left: 50%;
-        margin-left: -137.19px;
+        margin-left: -132px;
         font-size: 2.5em;
         opacity: 0;
         font-family: 'Titillium Web', sans-serif;
         animation: name2 2.5s 1s;
-        
         animation-fill-mode: forwards;
     }
-    #frame{ 
+    #frame {
         position: absolute;
         top: 34px;
-        left: 50%; 
+        left: 50%;
         opacity: 0;
-        margin-left: -68.25px;
-        animation: face 5s 2s; 
+        margin-left: -65.25px;
+        animation: face 5s 2s;
         cursor: pointer;
         animation-fill-mode: forwards;
         background-color: black;
-        overflow: hidden; 
+        overflow: hidden;
+    }
+    .skillbox{
+        left: 7%;
+        width: 75%;
     }
 }
