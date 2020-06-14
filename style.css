@@ -161,47 +161,43 @@ li.c::after{
 li.python::after{
     animation-name: python;
 }
-.circle{
+#loader{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 350px;
-    width: 350px;
-
-    opacity: 50%;
-    transition: rotate infinite linear ;
-    transform: rotate(180);
-}
-.loader{
-    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    z-index: 99;
-    background-color: rgb(0, 0, 0);
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 2em;
+    background-color: black;
 }
-#text{
-    position: absolute;
-    top: calc(50% - 30px);
-    left: calc(50% - 138px);
-    z-index: 4;
-    letter-spacing: 5px;font-size: 1.9em;
-    animation: jump 1s linear infinite, color 1s 0.2s infinite reverse;
-}
-#shadow{
-    position: absolute;
-    top: calc(50% - 25px);
-    left: calc(50% - 129px);
+.box{
+    height: 50px;
+    width: 50px;
     z-index: 2;
-    letter-spacing: 5px;font-size: 1.9em;
-    opacity: 50%;
-    animation: jump 1s 0.2s linear infinite, color 1s 0.2s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
 }
-
+#box1{
+    margin: -75px -75px;
+    background-color: red;
+    animation: resize 0.5s 0.4s both infinite;
+}
+#box2{
+   margin: -75px 25px;
+   background-color: green;
+   animation: resize 0.5s 0.8s both infinite;
+}
+#box3{
+    margin: 25px -75px;
+    background-color: blue;
+    animation: resize 0.5s 1.2s both infinite;
+}
+#box4{
+    margin: 25px 25px;
+    background-color: yellow;
+    animation: resize 0.5s 1.6s both infinite;
+}
 
 
 
@@ -302,26 +298,9 @@ li.python::after{
         width: 20%;
     }
 }
-@keyframes jump{
+@keyframes resize{
     50%{
-        transform: translateY(-10px);
-    }
-    100%{
-
-    }
-}
-@keyframes color{
-    25%{
-        color: blue;
-    }
-    50%{
-        color: red;
-    }
-    75%{
-        color: yellow;
-    }
-    100%{
-        color: green;
+        transform: scale(1.85);
     }
 }
 
