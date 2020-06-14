@@ -1,4 +1,8 @@
+body{
+  overflow-x: hidden;
+}
 .sky {
+    cursor: url("face/1.png");
     height: 600px;
     background-image: linear-gradient(rgb(3, 72, 95), rgba(255, 255, 255, 0));
 }
@@ -72,9 +76,9 @@
 }
 
 #frame:hover #face {
-    opacity: 60%;
     transform: scale(1.07);
     transition: 0.5s ease-in;
+    filter: blur(2px);
 }
 
 #frame2 {
@@ -156,6 +160,46 @@ li.c::after{
 }
 li.python::after{
     animation-name: python;
+}
+.circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 350px;
+
+    opacity: 50%;
+    transition: rotate infinite linear ;
+    transform: rotate(180);
+}
+.loader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 2em;
+}
+#text{
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 138px);
+    z-index: 4;
+    letter-spacing: 5px;font-size: 1.9em;
+    animation: jump 1s linear infinite, color 1s 0.2s infinite reverse;
+}
+#shadow{
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 129px);
+    z-index: 2;
+    letter-spacing: 5px;font-size: 1.9em;
+    opacity: 50%;
+    animation: jump 1s 0.2s linear infinite, color 1s 0.2s infinite;
 }
 
 
@@ -258,6 +302,28 @@ li.python::after{
         width: 20%;
     }
 }
+@keyframes jump{
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+
+    }
+}
+@keyframes color{
+    25%{
+        color: blue;
+    }
+    50%{
+        color: red;
+    }
+    75%{
+        color: yellow;
+    }
+    100%{
+        color: green;
+    }
+}
 
 
 /* Media Query */
@@ -299,11 +365,7 @@ li.python::after{
         left: 50%;
         opacity: 0;
         margin-left: -65.25px;
-<<<<<<< HEAD
         animation: face 5s 2s;
-=======
-        animation: face 5s 2s; 
->>>>>>> 2982fd688b91b70678a6831bd6dc964452d59e79
         cursor: pointer;
         animation-fill-mode: forwards;
         background-color: black;
