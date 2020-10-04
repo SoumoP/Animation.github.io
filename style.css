@@ -7,15 +7,7 @@ body{
     background-image: linear-gradient(rgb(3, 72, 95), rgba(255, 255, 255, 0));
 }
 
-#cloud1 {
-    width: 220px;
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    animation: wind 35s infinite;
-    animation-timing-function: linear;
-    z-index: 1;
-}
+
 
 #cloud2 {
     width: 150px;
@@ -29,7 +21,29 @@ body{
     z-index: 1;
     animation-fill-mode: both;
 }
+#cloud1 {
+    width: 220px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    animation: wind 35s infinite;
+    animation-timing-function: linear;
+    z-index: 1;
+}
 
+
+#heading2 {
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -145px;
+    font-size: 2.5em;
+    font-weight: 200;
+    opacity: 0;
+    font-family: 'Titillium Web', sans-serif;
+    animation: name2 2.5s 1s;
+    animation-fill-mode: forwards;
+}
 #heading1 {
     position: absolute;
     top: 250px;
@@ -45,18 +59,6 @@ body{
     animation-fill-mode: forwards;
 }
 
-#heading2 {
-    position: absolute;
-    top: 380px;
-    left: 50%;
-    margin-left: -145px;
-    font-size: 2.5em;
-    font-weight: 200;
-    opacity: 0;
-    font-family: 'Titillium Web', sans-serif;
-    animation: name2 2.5s 1s;
-    animation-fill-mode: forwards;
-}
 
 #frame {
     position: absolute;
@@ -71,10 +73,6 @@ body{
     overflow: hidden;
 }
 
-#face {
-    width: 130px;
-}
-
 #frame:hover #face {
     transform: scale(1.07);
     transition: 0.5s ease-in;
@@ -87,7 +85,9 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
+#face {
+    width: 130px;
+}
 .skills {
     position: absolute;
     top: 650px;
@@ -111,15 +111,7 @@ li{
     font-family: 'Titillium Web', sans-serif;
     font-weight: 700;;
 }
-li::before{
-    content: "";
-    position: absolute;
-    top: 30px;
-    width: 100%;
-    height: 15px;
-    background-color: rgba(14, 14, 14, 0.486);
-    border-radius: 10px;
-}
+
 li::after{
     content: "";
     position: absolute;
@@ -133,6 +125,15 @@ li::after{
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 
+}
+li::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(14, 14, 14, 0.486);
+    border-radius: 10px;
 }
 li.laziness::after{
     animation-name: laziness;
@@ -179,16 +180,7 @@ li.python::after{
     left: 50%;
     border-radius: 5px;
 }
-#box1{
-    margin: -75px -75px;
-    background-color: red;
-    animation: resize 0.3s 0s both infinite;
-}
-#box2{
-   margin: -75px 25px;
-   background-color: green;
-   animation: resize 0.3s 0.4s both infinite;
-}
+
 #box3{
     margin: 25px -75px;
     background-color: blue;
@@ -198,6 +190,16 @@ li.python::after{
     margin: 25px 25px;
     background-color: yellow;
     animation: resize 0.3s 1.2s both infinite;
+}
+#box1{
+    margin: -75px -75px;
+    background-color: red;
+    animation: resize 0.3s 0s both infinite;
+}
+#box2{
+   margin: -75px 25px;
+   background-color: green;
+   animation: resize 0.3s 0.4s both infinite;
 }
 
 
@@ -328,17 +330,6 @@ li.python::after{
         animation: name1 5s;
         animation-fill-mode: forwards;
     }
-    #heading2 {
-        position: absolute;
-        top: 380px;
-        left: 50%;
-        margin-left: -132px;
-        font-size: 2.5em;
-        opacity: 0;
-        font-family: 'Titillium Web', sans-serif;
-        animation: name2 2.5s 1s;
-        animation-fill-mode: forwards;
-    }
     #frame {
         position: absolute;
         top: 34px;
@@ -351,6 +342,18 @@ li.python::after{
         background-color: black;
         overflow: hidden;
     }
+    #heading2 {
+        position: absolute;
+        top: 380px;
+        left: 50%;
+        margin-left: -132px;
+        font-size: 2.5em;
+        opacity: 0;
+        font-family: 'Titillium Web', sans-serif;
+        animation: name2 2.5s 1s;
+        animation-fill-mode: forwards;
+    }
+
     .skillbox{
         left: 7%;
         width: 75%;
